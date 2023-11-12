@@ -1,25 +1,69 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import About from './components/About';
+import Masthead from './components/Masthead';
+import Nav from './components/Nav';
+import Skillset from './components/Skillset';
+import Project from './components/Project';
+import CV from './components/CV';
+import Contact from './components/Contact';
+import data from './data';
+import Footer from './components/Footer';
 
-function App() {
+
+
+export default function App() {
+
+
+  
+  const skill = data.skill.map(item => {
+
+          return(
+          <Skillset
+              skill= {item.skillset}
+              description={item.description}
+        />
+          )
+  })
+
+  const projects = data.projects.map(item => {
+      return(
+        <Project
+          name={item.name}
+          category = {item.category}
+          img = {item.img}
+        />
+      )
+  })
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Nav/>
+      <Masthead/>
+      <About/>
+      <section class="page-section" id="services">
+            <div class="container px-4 px-lg-5">
+                <h2 class="text-center mt-0">Skill set includes:</h2>
+                <hr class="divider" />
+                <div class="row gx-4 gx-lg-5"></div>
+                {skill}
+              </div>
+      </section>
+      <CV/>
+      
+      <div id="portfolio">
+          <div class="container-fluid p-0">
+            <div class="row g-0"></div>
+            {projects}
+
+          </div>
+          <Contact/>
+          <Footer/>
+      </div>
+
     </div>
+
+
   );
 }
-
-export default App;
