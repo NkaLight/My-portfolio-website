@@ -27,7 +27,7 @@ export default function Contact(props){
                             </div>
 
                         <div class="container px-4 px-lg-5 text-center">
-                            <h1><a  class="btn btn-light btn-xl" rel="noreferrer" href="tel:0223062870" target="_blank" title="click"><strong>Call me</strong></a></h1>
+                            <h1><a  class="btn btn-light btn-xl" rel="noreferrer" href="tel:+64223062870" target="_blank" title="click"><strong>Call me</strong></a></h1>
                           
                         </div>
                          
