@@ -17,7 +17,7 @@ export default function Contact(props){
                     <div class="col-lg-6">
                         
                             <div class="container px-4 px-lg-5 text-center">
-                                <h1><a class="btn btn-light btn-xl" rel="noreferrer" href="http://www.linkedin.com/in/nkanyiso-ndlovu-46a30821b" target="_blank" title="click">LinkedIN</a></h1>
+                                <h1><a class="btn btn-light btn-xl" rel="noreferrer" href="http://www.linkedin.com/in/nkanyiso-ndlovu-46a30821b" target="_blank" title="click">LinkedIn</a></h1>
                               
                             </div>
 
@@ -27,7 +27,7 @@ export default function Contact(props){
                             </div>
 
                         <div class="container px-4 px-lg-5 text-center">
-                            <h1><a  class="btn btn-light btn-xl" rel="noreferrer" href="tel:+64223062870" target="_blank" title="click"><strong>Call me</strong></a></h1>
+                            <h1><a  class="btn btn-light btn-xl" rel="noreferrer" href="tel:+64223062870" target="_blank" title="click">Call me</a></h1>
                           
                         </div>
                          
