@@ -30,6 +30,11 @@
     overflow: hidden;
     text-align: center;
    }
+   .coll{
+    text-align: center;
+    overflow: hidden;
+    height:fit-content;
+   }
    .col img{
     width:100%;
     height:auto;

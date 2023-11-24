@@ -7,7 +7,7 @@ export default function Project(props){
 
     return(
         <div>
-            <div class={props.isMobile ? "" : "col"}>
+            <div class={props.isMobile ? "coll" : "col"}>
                 <a href="/my-files/fudel.html" class="portfolio-box" title={`Project ${props.name}`}>
                     <img class="img-fluid" src={require(`../assets/img/${props.img}`)}alt="..." />
                     <div class="portfolio-box-caption">

@@ -15,19 +15,12 @@ import Footer from './components/Footer';
 export default function App() {
 
 
-  // const  [isMobile, setIsMobile] = React.useState(!navigator.userAgent.match(/iphone|android|blackberry/ig) || false)
+  const  [isMobile, setIsMobile] = React.useState(/Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
 
-  // React.useEffect(()=>{
-  //   setIsMobile(!navigator.userAgent.match(/iphone|android|blackberry/ig) || false)
-  // },[isMobile] )
-  let isMobile = false
-  
-  let count = 0
-
-
-  
+  React.useEffect(()=>
+    ()=> setIsMobile(/Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+  , [])
   const skill = data.skill.map(item => {
-
           return(
           <Skillset
               skill= {item.skillset}
@@ -37,19 +30,16 @@ export default function App() {
   })
 
   const projects = data.projects.map(item => {
-    count++;
       return(
         <Project
           name={item.name}
           category = {item.category}
           img = {item.img}
-          count={count}
+          isMobile={isMobile}
         />
 
       )
   })
-  
-
   return (
     <div >
       <Nav/>
@@ -64,15 +54,13 @@ export default function App() {
               </div>
       </section>
       <CV/>
-      
+
       <div id="portfolio">
           <div class="container-fluid p-0">
             <div class="row g-0"></div>
             <div className={isMobile ? "project" : "project-grid"}>
                 {projects}
             </div>
-            
-
           </div>
           <Contact/>
           <Footer/>

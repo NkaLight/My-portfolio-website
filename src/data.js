@@ -1,6 +1,5 @@
 let data = {
     skill:[
-
         {
             skillset:"Object oriented Programming",
             description:"Through Java, Python, Javascript etc",
@@ -26,8 +25,6 @@ let data = {
             description:"Data wrangling, visualisation, and modeling through tiddyvesrse package & pandas in python",
             favicon:"bi-globe ",
         },
-        
-        
     ],
     projects:[
         {
@@ -52,5 +49,4 @@ let data = {
         }
     ],
 }
-
 export default data
