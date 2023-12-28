@@ -18,7 +18,7 @@ const ProjectPage = () =>{
 
     return (
         <div className="project-page-section">
-            <div className="project-page-masthead" style={{backgroundImage : `url(${require(`../assets/img/thumbnails/${project.img}.png`)})`}}>
+            <div className="project-page-masthead" style={{backgroundImage : `url(${require(`../assets/img/thumbnails/${project.img}.png`)})`, backgroundRepeat : "no-repeat"}}>
                 <h1>{project.name}</h1>
             </div>
             
