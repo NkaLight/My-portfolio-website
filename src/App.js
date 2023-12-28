@@ -48,9 +48,9 @@ export default function App() {
   })
   return (
       <BrowserRouter>
-        <Nav/>
         <Routes>
           <Route path="/" element={<div>
+              <Nav isProjectPage={false}/>
               <Masthead/>
               <About/>
               <section class="skillset-section" id="services">
@@ -73,7 +73,13 @@ export default function App() {
                 <Footer/>
               </div>
             </div>}/>
-            <Route path='/projects/:projectName' element={<ProjectPage/>}/>
+            <Route path='/projects/:projectName' element={
+                <div>
+                  <Nav isProjectPage={true}/>
+                  <ProjectPage/>
+                </div>
+              }/>
+                
         </Routes>
 
       </BrowserRouter>

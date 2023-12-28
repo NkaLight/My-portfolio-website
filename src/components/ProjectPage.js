@@ -6,7 +6,8 @@ const ProjectPage = () =>{
 
     const {projectName} = useParams()
     const project = data.projects.find((item) => item.name === projectName)
-
+    
+    
     if(!project){
         return(
             <div className="project-page-section" >
@@ -14,14 +15,12 @@ const ProjectPage = () =>{
             </div>
         )
     }
-//style={{ backgroundImage: `url(${require("./resources/img/banners/3.jpg")})` }}
-
+    
     return (
         <div className="project-page-section">
-            <div className="project-page-masthead" style={{backgroundImage : `url(${require(`../assets/img/thumbnails/${project.img}.png`)})`, backgroundRepeat : "no-repeat"}}>
+            <div className="project-page-masthead" style={{backgroundImage : `url(${require(`../assets/img/thumbnails/${project.img}.png`)})`}}>
                 <h1>{project.name}</h1>
             </div>
-            
 
         </div>
     )

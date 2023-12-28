@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Nav(){
+export default function Nav(props){
 
     const [isNavOpen, setIsNavOpen] = React.useState(false)
 
@@ -24,7 +24,7 @@ export default function Nav(){
           document.removeEventListener("click", closeOnOutsideClick);
         };
       }, [isNavOpen]);
-      
+
     return(
         <div>
             <nav className={`navbar navbar-expand-lg navbar-light fixed-top py-3 ${isNavOpen ? "open" : ""}`} id="mainNav" ref={navRef}>
@@ -37,11 +37,22 @@ export default function Nav(){
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`} id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto my-2 my-lg-0">
-                            <li class="nav-item"><Link class="nav-link" to="/#about" >About</Link></li>
-                            <li class="nav-item"><Link class="nav-link" to="/#services">Skill set</Link></li>
-                            <li class="nav-item"><Link class="nav-link" to="/#portfolio">Portfolio</Link></li>
-                            <li class="nav-item"><Link class="nav-link" to="/#contact">Contact</Link></li>
+                    <ul class="navbar-nav ms-auto my-2 my-lg-0">{
+                        props.isProjectPage ? 
+                            <div>
+                                <li class="nav-item"><Link class="nav-link" to="/">Home</Link></li>
+                                <li class="nav-item"><Link class="nav-link" to="/#about" >About</Link></li>
+                                <li class="nav-item"><Link class="nav-link" to="/#services">Skill set</Link></li>
+                                <li class="nav-item"><Link class="nav-link" to="/#contact">Contact</Link></li>
+                            </div> : 
+                            <div>
+                                <li class="nav-item"><Link class="nav-link" to="/#about" >About</Link></li>
+                                <li class="nav-item"><Link class="nav-link" to="/#services">Skill set</Link></li>
+                                <li class="nav-item"><Link class="nav-link" to="/#portfolio">Portfolio</Link></li>
+                                <li class="nav-item"><Link class="nav-link" to="/#contact">Contact</Link></li>
+                            </div>
+                    }
+                            
                         </ul>
                     </div>
                 </div>
