@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "./Footer";
 import data from "../data";
 import { useParams } from "react-router-dom";
 
@@ -81,9 +82,22 @@ const ProjectPage = () =>{
     return (
         <div className="project-page-section">
             <div className="project-page-masthead" style={{backgroundImage : `url(${require(`../assets/img/thumbnails/${project.img}.png`)})`}}>
-                <h1 style={{color: brightness > 127.5 ? "black" : "white"}}>{project.name}</h1>
+                <h1 style={{color: brightness > 127.5 ? "black" : "white", fontWeight: "bold"}}>{project.name}</h1>
             </div>
-
+            <div className="project-page-description-container">
+                <h2 className="project-category">Project category: {project.category}</h2>
+                <hr className="divider"/>
+                <p className="project-description">{project.description}</p>
+            </div>
+            <div className="project-page-links">
+                <h2>Links</h2>
+                <p className="project-page-light-txt">Please find the links associated with this project</p>
+                <hr className="divider"/>
+                <div class="container px-4 px-lg-5 text-center">
+                    <h1><a class="btn btn-light btn-xl" rel="noreferrer" href="https://www.google.com" target="_blank" title="click">Github</a></h1>
+                </div>
+            </div>
+            <Footer/>
         </div>
     )
 }
