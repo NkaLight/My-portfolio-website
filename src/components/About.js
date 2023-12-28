@@ -14,7 +14,7 @@ export default function About(){
                                                             it ever since, I am currently a student at the University of Otago, studying computer science & software engineering, 
                                                             whilst its still my first year, I feel as though I am ready to join the
                                                             professional space, to both to gain industry knowledge but also to put my skills to the test through internships.</p>
-                            <a class="btn btn-light btn-xl" href="#services">Get Started</a>
+                            <a class="btn btn-light btn-xl" href="#skillset">Get Started</a>
                         </div>
                     </div>
                 </div>
