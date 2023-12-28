@@ -30,22 +30,26 @@ let data = {
         {
             name:"Project Fudel",
             category:"Web development",
-            img:"raul-gonzalez-escobar-ZpIskW1Tuvc-unsplash.jpg"
+            img:"1",
+            description:"Shopping website"
         },
         {
             name:"React Project", 
             category: "Web development",
-            img:"damian-patkowski-T-LfvX-7IVg-unsplash.jpg"
+            img:"4",
+            description:"My portfolio website"
         },
         {
             name:"Home Prices Prediction", 
             category: "Machine Learning",
-            img:"tom-rumble-7lvzopTxjOU-unsplash.jpg"
+            img:"2",
+            description:"Using the ML package found R programming language and synthetic data I build a model to predict the home prices of homes in the Dunedin area"
         },
         {
             name:"Exam marks prediction", 
             category: "Machine Learning",
-            img:"jeshoots-com-pUAM5hPaCRI-unsplash.jpg"
+            img:"3",
+            description:"ML concepts for student to develop an optimal study strategy."
         }
     ],
 }

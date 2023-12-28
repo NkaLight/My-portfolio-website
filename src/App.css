@@ -24,12 +24,7 @@
     margin:0px;
     background-color: white;
 
-   }
-   .col{
-    height:420px;
-    overflow: hidden;
-    text-align: center;
-   }
+}
    .coll{
     text-align: center;
     overflow: hidden;
@@ -52,7 +47,16 @@
       margin-bottom: 40px;
       padding-top:50px;
    }
-   
+   .project-page-section{
+    margin-top: 80px;
+   }
+   .project-page-masthead{
+    height: 350px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
   :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;

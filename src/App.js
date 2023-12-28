@@ -1,4 +1,10 @@
 import './App.css';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import ProjectPage from './components/ProjectPage';
 import React from 'react';
 import About from './components/About';
 import Masthead from './components/Masthead';
@@ -41,32 +47,36 @@ export default function App() {
       )
   })
   return (
-    <div >
-      <Nav/>
-      <Masthead/>
-      <About/>
-      <section class="skillset-section" id="services">
-            <div class="container px-4 px-lg-5">
-                <h2 class="text-center mt-0">Skill set includes:</h2>
-                <hr class="divider" />
-                <div class="row gx-4 gx-lg-5"></div>
-                {skill}
+      <BrowserRouter>
+        <Nav/>
+        <Routes>
+          <Route path="/" element={<div>
+              <Masthead/>
+              <About/>
+              <section class="skillset-section" id="services">
+                <div class="container px-4 px-lg-5">
+                  <h2 class="text-center mt-0">Skill set includes:</h2>
+                  <hr class="divider" />
+                  <div class="row gx-4 gx-lg-5"></div>
+                  {skill}
+                </div>
+              </section>
+              <CV/>
+              <div id="portfolio">
+                <div class="container-fluid p-0">
+                  <div class="row g-0"></div>
+                  <div className={isMobile ? "project" : "project-grid"}>
+                    {projects}
+                  </div>
+                </div>
+                <Contact/>
+                <Footer/>
               </div>
-      </section>
-      <CV/>
+            </div>}/>
+            <Route path='/projects/:projectName' element={<ProjectPage/>}/>
+        </Routes>
 
-      <div id="portfolio">
-          <div class="container-fluid p-0">
-            <div class="row g-0"></div>
-            <div className={isMobile ? "project" : "project-grid"}>
-                {projects}
-            </div>
-          </div>
-          <Contact/>
-          <Footer/>
-      </div>
-
-    </div>
+      </BrowserRouter>
 
 
   );
