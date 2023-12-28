@@ -50,10 +50,10 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<div>
-              <Nav isProjectPage={false}/>
+              <Nav isProjectPage={false} isMobile={isMobile}/>
               <Masthead/>
               <About/>
-              <section class="skillset-section" id="services">
+              <section class="skillset-section" id="skillset">
                 <div class="container px-4 px-lg-5">
                   <h2 class="text-center mt-0">Skill set includes:</h2>
                   <hr class="divider" />
@@ -75,7 +75,7 @@ export default function App() {
             </div>}/>
             <Route path='/projects/:projectName' element={
                 <div>
-                  <Nav isProjectPage={true}/>
+                  <Nav isProjectPage={true} isMobile={isMobile}/>
                   <ProjectPage/>
                 </div>
               }/>
