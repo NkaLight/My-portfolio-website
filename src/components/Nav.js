@@ -47,7 +47,7 @@ export default function Nav(props){
                             </ul> : 
                             <ul className="navbar-nav ms-auto my-2 my-lg-0">
                                 <li className="nav-item"onClick={toggleNav}><a className="nav-link" href="#about" >About</a></li>
-                                <li className="nav-item"onClick={toggleNav}><a className="nav-link" href="#services">Skill set</a></li>
+                                <li className="nav-item"onClick={toggleNav}><a className="nav-link" href="#skillset">Skill set</a></li>
                                 <li className="nav-item"onClick={toggleNav}><a className="nav-link" href="#portfolio">Portfolio</a></li>
                                 <li className="nav-item"onClick={toggleNav}><a className="nav-link" href="#contact">Contact</a></li>
                             </ul>
