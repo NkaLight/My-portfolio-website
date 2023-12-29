@@ -36,10 +36,10 @@ export default function Nav(props){
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`} id="navbarResponsive">
-                    {//{{ url('/') }}/#service
+                    {
                         props.isProjectPage ? 
                             <ul className="navbar-nav ms-auto my-2 my-lg-0">
-                                <li className="nav-item" onClick={toggleNav}><a class="nav-link" href="{{url('/')}}">Home</a></li>
+                                <li className="nav-item" onClick={toggleNav}><a class="nav-link" href="/">Home</a></li>
                                 <li className="nav-item" onClick={toggleNav}><a className="nav-link" href="/#about" >About</a></li>
                                 
                                 <li className="nav-item" onClick={toggleNav}><a className="nav-link" href="/#skillset">Skill set</a></li>

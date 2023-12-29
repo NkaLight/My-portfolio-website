@@ -49,12 +49,28 @@
    .project-page-section{
     margin-top: 73px;
    }
-   .project-page-masthead{ /*project-page-masthead*/
+   @media(min-width:992px) {
+    .project-page-section{
+      margin:0px;
+    }
+    .project-page-masthead{
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-size: cover;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      margin-bottom: 3rem;
+      padding-bottom: 40rem;
+      padding-top:15rem;
+    }
+   }
+   .project-page-masthead{
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
     padding-top:9rem;
-    padding-bottom:9rem;
+    padding-bottom:12rem;
     margin-bottom:3rem;
     display: flex;
     justify-content: center;

@@ -85,13 +85,13 @@ const ProjectPage = () =>{
                 <h1 style={{color: brightness > 127.5 ? "black" : "white", fontWeight: "bold"}}>{project.name}</h1>
             </div>
             <div className="project-page-description-container">
-                <h2 className="project-category">Project category: {project.category}</h2>
+                <h2 className="project-category">{`Project category: ${project.category}`}</h2>
                 <hr className="divider"/>
                 <p className="project-description">{project.description}</p>
             </div>
             <div className="project-page-links">
                 <h2>Links</h2>
-                <p className="project-page-light-txt">Please find the links associated with this project</p>
+                <p className="text-muted mb-0">Please find the links associated with this project</p>
                 <hr className="divider"/>
                 <div class="container px-4 px-lg-5 text-center">
                     <h1><a class="btn btn-light btn-xl" rel="noreferrer" href="https://www.google.com" target="_blank" title="click">Github</a></h1>
