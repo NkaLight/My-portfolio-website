@@ -31,25 +31,34 @@ let data = {
             name:"Project Fudel",
             category:"Web development",
             img:"1",
-            description:"Shopping website"
+            description:"Shopping website",
+            url:"",
+            github:"",
         },
         {
             name:"React Project", 
             category: "Web development",
             img:"4",
-            description:"My portfolio website"
+            description:"My portfolio website",
+            url:"",
+            github:"",
+            
         },
         {
             name:"Home Prices Prediction", 
             category: "Machine Learning",
             img:"2",
-            description:"Using the ML package found R programming language and synthetic data I build a model to predict the home prices of homes in the Dunedin area"
+            description:"Using the ML package found R programming language and synthetic data I build a model to predict the home prices of homes in the Dunedin area",
+            url:"https://homeprices.netlify.app",
+            github:"https://github.com/NkaLight/HomePricesPrediction"
         },
         {
             name:"Exam marks prediction", 
             category: "Machine Learning",
             img:"3",
-            description:"ML concepts for student to develop an optimal study strategy."
+            description:"ML concepts for student to develop an optimal study strategy.",
+            url:"",
+            github:"",
         }
     ],
 }

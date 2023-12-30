@@ -70,7 +70,7 @@ const ProjectPage = () =>{
             removeImage();
             window.removeEventListener('beforeunload', removeImage)
         }
-    }, [])
+    }, [project.img])
     
     if(!project){
         return(
@@ -94,7 +94,9 @@ const ProjectPage = () =>{
                 <p className="text-muted mb-0">Please find the links associated with this project</p>
                 <hr className="divider"/>
                 <div class="container px-4 px-lg-5 text-center">
-                    <h1><a class="btn btn-light btn-xl" rel="noreferrer" href="https://www.google.com" target="_blank" title="click">Github</a></h1>
+                    <h1><a class="btn btn-light btn-xl" rel="noreferrer" href={`${project.url}`} target="_blank" title="click">Website</a></h1>
+                    <br/>
+                    <h1><a class="btn btn-light btn-xl" rel="noreferrer" href={`${project.github}`} target="_blank" title="click">Github</a></h1>
                 </div>
             </div>
             <Footer/>
